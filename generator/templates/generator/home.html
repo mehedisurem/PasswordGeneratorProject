@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+
+<body>
+<div class="container">
+ 	<div class="header">
+ 		<h1>  <span class="redClr">Pass</span>word Gene<span class="redClr">rator</span></h1>
+ 	</div>
+ 	<div class="main">
+ 		<form  action="{% url 'password' %}">
+            <div class="lengthDiv"><p class="pText">Password length  :</p>
+            <select class="sLength" name="length">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13" selected="selected">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+
+            </select></div>
+
+ 			<span class="checkboxClass">
+
+ 				<input class="checkbox-row" type="checkbox"  name="uppercase"> <p class="pText"> Uppercase</p>
+
+ 			</span><br>
+            <span class="checkboxClass">
+
+ 				<input class="checkbox-row" type="checkbox"  name="numbers"> <p class="pText"> Numbers</p>
+
+ 			</span><br>
+            <span class="checkboxClass">
+
+ 				<input class="checkbox-row" type="checkbox"  name="specialCharacter"> <p class="pText"> Special Character</p>
+
+ 			</span><br>
+ 				<button type = "submit" >Generate Password</button>
+
+ 		</form>
+ 	</div>
+ </div>
+
+</body>
+</html>
